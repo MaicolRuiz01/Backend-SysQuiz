@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Pre Registro</title>
+<link rel="stylesheet" type="text/css" href="/static/css/style.css"></link>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body >
+	<header style="color: white; padding: 3; text-align: center;">
+		<img
+			src="https://ww2.ufps.edu.co/public/archivos/elementos_corporativos/logo-horizontal.jpg"
+			alt="Logo del sitio web" style="width: 800px;"></img>
+
+	</header>
+	<div class="container" style="padding: 3; ">
+		<h1 style=" text-align: center;" th:text="${titulo}"></h1>
+		<div class=" p-3" >
+		<h1 th:text="'Docente : '+ ${docente.nombre}"></h1>
+		</div>
+	
+
+
+		<h3 th:text="${detalle}"></h3>
+		<h1 th:text="'Contraseña Temporal : '+ ${docente.password}"></h1>
+		<h1 style=" text-align: center;" >
+		
+			<a  href="" th:text="${message}"></a>
+			<span th:text="${url}"> </span>
+		</h1>
+		<br></br>
+
+		
+		<div class="container" style="padding: 3; text-align: center;">
+		<p>Este email se genero por el director del programa: </p>
+		<p th:text="${fecha}"></p>
+		</div>
+
+	</div>
+
+
+	<footer
+		style="background-color: #f2f2f2; border-top: 2px solid #dddddd; color: #999999; font-size: 14px; padding: 10px; text-align: center; width: auto;">
+
+		<p>Universidad Francisco de Paula Santander</p>
+		<p>Cucuta Norte de santander</p>
+		<p>Colombia</p>
+
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
